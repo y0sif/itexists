@@ -1,0 +1,8 @@
+# Maintainer-only notes
+docs/BRAND.md
+docs/DESIGN.md
+.claude/
+
+# OS and editor files
+.DS_Store
+*.swp

@@ -1,0 +1,13 @@
+{
+  "name": "itexists",
+  "version": "0.1.0",
+  "description": "It probably exists. An agent skill that checks the live web before you build an app, a tool, or a feature.",
+  "author": {
+    "name": "y0sif",
+    "url": "https://github.com/y0sif"
+  },
+  "homepage": "https://github.com/y0sif/itexists",
+  "repository": "https://github.com/y0sif/itexists",
+  "license": "MIT",
+  "keywords": ["prior-art", "research", "idea-validation", "build-vs-buy", "skill"]
+}

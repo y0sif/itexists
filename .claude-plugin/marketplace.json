@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "itexists",
+  "description": "It probably exists. An agent skill that checks the live web before you build an app, a tool, or a feature.",
+  "owner": {
+    "name": "y0sif",
+    "url": "https://github.com/y0sif"
+  },
+  "plugins": [
+    {
+      "name": "itexists",
+      "description": "It probably exists. An agent skill that checks the live web before you build an app, a tool, or a feature.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}
