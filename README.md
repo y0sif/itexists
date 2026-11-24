@@ -41,7 +41,7 @@ Then a table of five more, the platform check, and the install steps if you want
 </tr>
 </table>
 
-Both sides are real runs. The full report is in [the examples](docs/examples.md#a-whole-app).
+The full report is in [the examples](docs/examples.md#a-whole-app).
 
 ## Install
 
@@ -84,11 +84,11 @@ Call it with what you want to build, right before you build it:
 
 - **Whole things or features.** Ask about an app, a tool, a library, or a feature. For a feature, run it inside your project: it reads the manifest and README to learn your stack, and changes nothing.
 - **`--deep`** searches about twice as much. Use it when the default run says the picture is still unclear.
-- **Only when you call it.** It never runs on its own. Your agent needs a web search tool; without one, itexists stops and says so.
+- **Only when you call it.** It runs only when you ask for it by name. Your agent needs a web search tool; without one, itexists stops and says so.
 
 ## What you get
 
-The report fits on one screen and ends in one verdict and one next step. It holds:
+The report fits on one screen, with one verdict and one next step. It holds:
 
 - the idea restated in one line
 - a table of what exists, with links, status, price, and what each one is missing
@@ -103,7 +103,7 @@ The report fits on one screen and ends in one verdict and one next step. It hold
 | **BUILD IT** | Nothing close exists, or everything close fails a reason that matters (closed, cloud-only, wrong platform). |
 | **DIG FIRST** | Someone built this and stopped. Read why before you start. |
 
-If you are building it to learn, it says so too: build it anyway, and study the best existing project first.
+With USE IT or EXTEND IT, it adds a line for anyone building to learn: build it anyway, and study the best existing project first.
 
 It never installs anything, runs commands that change things, or posts anywhere until you say yes, and then only the exact command it showed you.
 
@@ -121,27 +121,26 @@ It reads the real pages (repos, store listings, docs) instead of trusting search
 
 ## We ran it on itself
 
-Asked about "an agent skill that checks whether something already exists before you build it", itexists said **BUILD THE GAP** next to ECC's search-first: skills that make that decision for libraries and packages exist, but none it read checks whole products, app stores, platform built-ins or dead projects. It missed [who-built-this-before-me](https://github.com/iagochavarry/who-built-this-before-me), the closest one we know of: a default run is about six searches, and `--deep` does about twice that. [Full report](docs/examples.md#itexists-on-itself).
+Asked about itself, itexists said **BUILD THE GAP** next to ECC's search-first: skills that make that decision for libraries and packages exist, but none it read checks whole products, app stores, platform built-ins or dead projects. It missed [who-built-this-before-me](https://github.com/iagochavarry/who-built-this-before-me), the closest one we know of. [Full report](docs/examples.md#itexists-on-itself).
 
 ## How it compares
 
-itexists is not the first skill of its kind. This is where it differs:
+itexists is not the first skill of its kind. Its search method builds on who-built-this-before-me, with credit in [LICENSE](LICENSE). This is where it differs:
 
 | Project | What it is | How itexists differs |
 |---|---|---|
 | [who-built-this-before-me](https://github.com/iagochavarry/who-built-this-before-me) | A skill that checks prior art across GitHub, Hacker News, Product Hunt and registries, with a similar verdict | Also searches app stores, platform built-ins and today's workarounds, handles features inside your project, and offers to set up what it found |
-| [search-first](https://github.com/affaan-m/ECC) (ECC) | A skill that checks npm, PyPI, MCP servers and GitHub before you write a helper | Checks whole apps and products too, not only libraries |
-| [idea-reality-mcp](https://github.com/mnemox-ai/idea-reality-mcp) | An MCP server that scores how crowded an idea is | No server to install, and it ends with what to do instead of a score |
+| [search-first](https://github.com/affaan-m/ECC) (ECC) | A skill that checks npm, PyPI, MCP servers and GitHub before you write code | Checks whole apps and products too, not only libraries |
+| [idea-reality-mcp](https://github.com/mnemox-ai/idea-reality-mcp) | An MCP server that scores how crowded an idea is | No server to install, and it ends with use, extend, or build rather than a crowdedness score |
 | [patent](https://docs.rs/crate/patent/latest) | A CLI that searches package registries, GitHub and Hacker News for an existing dev tool | Runs inside your agent, and covers more than dev tools |
-| Idea-validation skills | Skills that check demand and willingness to pay | Asks whether it already exists, with live searches, rather than whether people want it |
 
 ## FAQ
 
 **Does it cost anything when I am not using it?**
-No. In Claude Code it is not loaded until you call it, so it adds nothing to your context. A run uses a handful of web searches and page reads from your normal usage.
+It costs nothing until you call it: Claude Code does not load it until then, so it adds nothing to your context. A run uses a handful of web searches and page reads from your normal usage.
 
 **Can't I just ask my agent whether this exists?**
-You can. itexists makes the agent search from several angles, read the real pages, check your platform and the projects that shut down, and pick one verdict instead of listing options.
+You can ask directly, and itexists makes the agent search from several angles, read the real pages, check your platform and the projects that shut down, and pick one verdict instead of listing options.
 
 **Which agents does it work with?**
 Any agent that loads `SKILL.md` skills and can search the web. The skills CLI installs it into each one.

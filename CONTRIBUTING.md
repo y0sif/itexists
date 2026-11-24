@@ -4,10 +4,10 @@ The whole project is one file, [`skills/itexists/SKILL.md`](skills/itexists/SKIL
 
 ## Try a change
 
-Load your copy as a Claude Code plugin and run it:
+Load your copy as a Claude Code plugin, from any folder, and run it:
 
 ```bash
-claude --plugin-dir .
+claude --plugin-dir /path/to/your/itexists
 ```
 
 Then, in that session:

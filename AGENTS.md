@@ -17,8 +17,6 @@ Run `scripts/check.sh` before every commit. It runs `claude plugin validate .` a
 ## Rules
 
 - Keep one `SKILL.md`. Never add a second copy.
-- `SKILL.md` stays short: every line is read on every run. Cut before you add.
 - The description sentence is identical in `README.md`, `plugin.json` and `marketplace.json`.
-- No numeric claims about time or tokens saved. Examples are real runs only, never written by hand.
-- No em dashes in any markdown file.
-- Test a `SKILL.md` change with `claude --plugin-dir .` on a whole-app idea and on a feature inside a project.
+- Examples are real runs only, never written by hand.
+- Before changing `SKILL.md`, follow [CONTRIBUTING.md](CONTRIBUTING.md).

@@ -11,7 +11,7 @@ allowed-tools: WebSearch WebFetch
 
 # itexists
 
-The user wants to build something. Before they spend a weekend, or a week of tokens, find out what already exists: solved well, solved badly, abandoned for a reason worth knowing, or still open. Find out which one this is and say it plainly.
+The user is about to build something. First find out what already exists, and what that means for them: use it, extend it, build only the missing part, build it, or learn why the last attempt stopped.
 
 ## Rule zero: search the live web
 

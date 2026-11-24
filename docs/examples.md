@@ -1,6 +1,6 @@
 # Examples
 
-These are real itexists runs in Claude Code from November 2026, copied as the agent printed them. The only edits: the trailing source list the search tool adds is removed (the table already links every source), and a dash in one table cell became `n/a`. The web changes, so a run today can find different things.
+These are real itexists runs in Claude Code from November 2026, copied as the agent printed them. The only edits: the trailing source list the search tool adds is removed (the table already links every source), a dash in one table cell became `n/a`, and report headings are one level smaller to fit this page. The web changes, so a run today can find different things.
 
 ## A whole app
 
