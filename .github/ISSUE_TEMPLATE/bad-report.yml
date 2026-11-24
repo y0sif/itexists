@@ -1,0 +1,50 @@
+name: Bad report
+description: itexists missed something, invented something, or picked the wrong verdict
+labels: [bug]
+body:
+  - type: input
+    id: request
+    attributes:
+      label: What you asked
+      description: The full /itexists line.
+      placeholder: /itexists a habit tracker for Android with streaks
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What went wrong
+      options:
+        - It missed something that already exists
+        - It named something that does not exist, or got its details wrong
+        - The verdict was wrong
+        - It did not search the web
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What it should have found or said, with links.
+    validations:
+      required: true
+  - type: textarea
+    id: report
+    attributes:
+      label: The report it gave
+      render: markdown
+  - type: dropdown
+    id: agent
+    attributes:
+      label: Agent
+      options: [Claude Code, Codex, Cursor, Gemini CLI, OpenCode, Other]
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: Installed with
+      options: [npx skills add, Claude Code plugin, Copied the file by hand]
+    validations:
+      required: true
