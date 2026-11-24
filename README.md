@@ -84,16 +84,18 @@ Call it with what you want to build, right before you build it:
 
 - **Whole things or features.** Ask about an app, a tool, a library, or a feature. For a feature, run it inside your project: it reads the manifest and README to learn your stack, and changes nothing.
 - **`--deep`** searches about twice as much. Use it when the default run says the picture is still unclear.
+- **`--save`** also saves the report for you to open later: as a private page where your agent can publish one (an artifact in Claude Code), or else as an `itexists-<idea>.md` file in the current folder. Without it, nothing is saved.
 - **Only when you call it.** It runs only when you ask for it by name. Your agent needs a web search tool; without one, itexists stops and says so.
 
 ## What you get
 
-The report fits on one screen, with one verdict and one next step. It holds:
+The report is short, with one verdict and one next step. It holds:
 
 - the idea restated in one line
 - a table of what exists, with links, status, price, and what each one is missing
 - what was searched, whether your platform already ships it, and who tried and stopped
 - the smallest gap nothing covers
+- the biggest risk that isn't a competitor, when it sees one
 
 | Verdict | Means |
 |---|---|
@@ -105,7 +107,7 @@ The report fits on one screen, with one verdict and one next step. It holds:
 
 With USE IT or EXTEND IT, it adds a line for anyone building to learn: build it anyway, and study the best existing project first.
 
-It never installs anything, runs commands that change things, or posts anywhere until you say yes, and then only the exact command it showed you.
+It never installs anything, changes your files, or posts anywhere until you say yes, and then only the exact command it showed you. The one exception is `--save`, which writes the report because you asked it to.
 
 ## How it looks at an idea
 
